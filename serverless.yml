@@ -1,0 +1,16 @@
+service: expressInAWSDemo #Name of your App
+
+provider:
+ name: aws
+ runtime: nodejs10.x # Node JS version
+ memorySize: 512
+ timeout: 15
+ stage: production
+ region: us-east-1 # AWS region
+
+functions:
+ api:
+   handler: lambda.universal
+   events:
+     - http: ANY {proxy+}
+     - http: ANY /
