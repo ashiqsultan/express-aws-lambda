@@ -20,9 +20,9 @@ app.get('/time', (req, res) => {
 //To check send a POST req with "name" and check your lambda function console
 app.post('/logthis', (req, res) => {
    const name = req.body.name;
-   const toPrint = `\n >>> My name is ${name} <<< \n`
-   console.info(toPrint)
-   res.status(200).send(toPrint);
+   const toLog = `\n >>> My name is ${name} <<< \n`
+   console.info(toLog)
+   res.status(200).send(toLog);
 });
 
 module.exports = app;
