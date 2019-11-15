@@ -1,4 +1,3 @@
-//This is where all your code goes
 const express = require('express');
 const app = express();
 
